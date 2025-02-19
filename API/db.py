@@ -4,9 +4,9 @@ from mysql.connector import pooling
 # Configura la connexió a MariaDB
 db_config = {
     'host': 'mariadb',
-    'user': 'lis',
-    'password': 'system',
-    'database': 'recipesdb',
+    'user': 'root',
+    'password': 'P@ssw0rd',
+    'database': 'recipies',
     'collation': 'utf8mb4_general_ci'
 }
 
