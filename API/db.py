@@ -1,7 +1,7 @@
 import mysql.connector
 from mysql.connector import pooling
 
-# Configura la connexió a MariaDB
+# Configuración de la BD
 db_config = {
     'host': 'mariadb',
     'user': 'root',
@@ -10,8 +10,8 @@ db_config = {
     'collation': 'utf8mb4_general_ci'
 }
 
-# Pool de connexions
-db_pool = pooling.MySQLConnectionPool(pool_name="mypool", pool_size=5, **db_config)
+# Crear un pool de conexiones
+db_pool = pooling.MySQLConnectionPool(pool_name="mypool", pool_size=10, **db_config)
 
 def get_db_connection():
-    return db_pool.get_connection()
+    conn = db_pool.get_connection()
